@@ -23,7 +23,10 @@
   font-size: 1rem;
   font-weight: 500;
   color: #be123c;
-  margin-right: 20px;
+}
+
+.featured_movies_list_swiper {
+  margin-top: 50px;
 }
 
 .featured_movies_list_item {
@@ -79,4 +82,17 @@
 
 .swiper_rating_value {
   color: #000 !important;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .featured_movies_list_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

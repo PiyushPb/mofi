@@ -5,7 +5,6 @@ import "swiper/css";
 import { FiPlayCircle } from "react-icons/fi";
 
 import "./css/homeswiper.css";
-// import "./js/swiper.js";
 
 import swiperData from "../data/swiperData.json"; // Assuming the JSON file is located in the '../data' directory
 
