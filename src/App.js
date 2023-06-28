@@ -2,13 +2,13 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import Navbar from "./Components/Navbar";
-import Homeswiper from "./Components/Homeswiper";
+import Home from "./Home";
 
 function App() {
   return (
     <>
+      <Home />
       {/* <Navbar /> */}
-      <Homeswiper />
     </>
   );
 }

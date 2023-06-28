@@ -3,7 +3,7 @@
   height: 100vh;
   position: relative;
   overflow: hidden;
-  background-color: aqua;
+  background-color: #000;
 }
 
 .swiper_poster {
@@ -87,15 +87,7 @@
   object-fit: cover;
 }
 
-.swiper-hero-progress {
-  position: absolute;
-  left: 0;
-  bottom: 0px;
-  width: 100px;
-  height: 3px;
-  background: #fff;
-  z-index: 5;
-}
+
 
 @media screen and (max-width: 768px) {
   .swiper_content {

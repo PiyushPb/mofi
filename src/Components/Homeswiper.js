@@ -1,14 +1,22 @@
-import swiper1 from "../assets/Poster.jpg";
-import "./css/homeswiper.css";
-
-import { FiPlayCircle } from "react-icons/fi";
-
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
-
 import "swiper/css";
+import { FiPlayCircle } from "react-icons/fi";
+
+import "./css/homeswiper.css";
+// import "./js/swiper.js";
+
+import swiperData from "../data/swiperData.json"; // Assuming the JSON file is located in the '../data' directory
 
 function Homeswiper() {
+  const [swiperSlides, setSwiperSlides] = useState([]);
+
+  useEffect(() => {
+    // Load the swiper data from the JSON file
+    setSwiperSlides(swiperData);
+  }, []);
+
   return (
     <Swiper
       effect="slide"
@@ -30,64 +38,36 @@ function Homeswiper() {
       }}
       modules={[Autoplay]}
     >
-      <SwiperSlide>
-        <div className="swiper_container">
-          <img src={swiper1} alt="Jhon wick 3" className="swiper_poster" />
-          <div className="swiper_overlay" />
-          <div className="swiper_content">
-            <h1 className="swiper_title">John Wick 3 : Parabellum</h1>
-            <div className="swiper_rating">
-              <span className="swiper_rating_icon">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg"
-                  alt="IMDB"
-                  className="rating_icon"
-                />
-              </span>
-              <span className="swiper_rating_value">86.0 / 100</span>
+      {swiperSlides.map((slide, index) => (
+        <SwiperSlide key={index}>
+          <div className="swiper_container">
+            <img
+              src={slide.image}
+              alt={slide.title}
+              className="swiper_poster"
+            />
+            <div className="swiper_overlay" />
+            <div className="swiper_content">
+              <h1 className="swiper_title">{slide.title}</h1>
+              <div className="swiper_rating">
+                <span className="swiper_rating_icon">
+                  <img
+                    src={slide.ratingIcon}
+                    alt="IMDB"
+                    className="rating_icon"
+                  />
+                </span>
+                <span className="swiper_rating_value">{slide.rating}</span>
+              </div>
+              <p className="swiper_description">{slide.description}</p>
+              <a href="#" className="swiper_button">
+                <FiPlayCircle className="btn_play_icon" />
+                Watch Trailer
+              </a>
             </div>
-            <p className="swiper_description">
-              John Wick is on the run after killing a member of the
-              international assassins' guild, and with a $14 million price tag
-              on his head, he is the target of hit men and women everywhere.
-            </p>
-            <a href="#" className="swiper_button">
-              <FiPlayCircle className="btn_play_icon" />
-              Watch Trailer
-            </a>
           </div>
-        </div>
-      </SwiperSlide>
-
-      <SwiperSlide>
-        <div className="swiper_container">
-          <img src={swiper1} alt="Jhon wick 3" className="swiper_poster" />
-          <div className="swiper_overlay" />
-          <div className="swiper_content">
-            <h1 className="swiper_title">John Wick 2 : Parabellum</h1>
-            <div className="swiper_rating">
-              <span className="swiper_rating_icon">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg"
-                  alt="IMDB"
-                  className="rating_icon"
-                />
-              </span>
-              <span className="swiper_rating_value">86.0 / 100</span>
-            </div>
-            <p className="swiper_description">
-              John Wick is on the run after killing a member of the
-              international assassins' guild, and with a $14 million price tag
-              on his head, he is the target of hit men and women everywhere.
-            </p>
-            <a href="#" className="swiper_button">
-              <FiPlayCircle className="btn_play_icon" />
-              Watch Trailer
-            </a>
-          </div>
-        </div>
-      </SwiperSlide>
-      <div class="swiper-hero-progress"></div>
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 }

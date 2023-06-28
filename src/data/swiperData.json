@@ -1,0 +1,16 @@
+[
+  {
+    "title": "John Wick 3 : Parabellum",
+    "image": "/static/media/Poster2.6e28282f51d79f2423f4.jpg",
+    "ratingIcon": "https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg",
+    "rating": "86.0 / 100",
+    "description": "John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere."
+  },
+  {
+    "title": "Thor : Love and thunder",
+    "image": "/static/media/Poster.bd9b25ce0e813b6b7732.jpg",
+    "ratingIcon": "https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg",
+    "rating": "86.0 / 100",
+    "description": "John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere."
+  }
+]
