@@ -6,7 +6,7 @@ import Featuredmovies from "./Components/Featuredmovies";
 export default function Home() {
   return (
     <>
-      {/* <Homeswiper /> */}
+      <Homeswiper />
       <Featuredmovies />
     </>
   );

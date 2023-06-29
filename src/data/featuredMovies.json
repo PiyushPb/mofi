@@ -1,0 +1,82 @@
+[
+  {
+    "imageUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg",
+    "country": "USA, 2016 - Current",
+    "title": "Money Heist",
+    "imdbRating": "88.0 / 100",
+    "rottenTomatoesRating": "97%",
+    "genre": "Crime, Drama, Thriller"
+  },
+  {
+    "imageUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7gKI9hpEMcZUQpNgKrkDzJpbnNS.jpg",
+    "country": "USA, 2022",
+    "title": "Extraction 2 ",
+    "imdbRating": "75.5 / 100",
+    "rottenTomatoesRating": "85%",
+    "genre": "Action, Adventure"
+  },
+  {
+    "imageUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fiVW06jE7z9YnO4trhaMEdclSiC.jpg",
+    "country": "USA, 2023",
+    "title": "Fast X ",
+    "imdbRating": "82.3 / 100",
+    "rottenTomatoesRating": "92%",
+    "genre": "Action, Crime, Thriller"
+  },
+  {
+    "imageUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+    "country": "Canada, 2021",
+    "title": "Spider-Man: Across the Spider-Verse",
+    "imdbRating": "70.9 / 100",
+    "rottenTomatoesRating": "78%",
+    "genre": "Action, Adventure, Animation, Science Fiction"
+  },
+  {
+    "imageUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+    "country": "USA, 2018",
+    "title": "Movie 5",
+    "imdbRating": "84.6 / 100",
+    "rottenTomatoesRating": "90%",
+    "genre": "Action, Sci-Fi"
+  },
+  {
+    "imageUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+    "country": "France, 2022",
+    "title": "Movie 6",
+    "imdbRating": "79.1 / 100",
+    "rottenTomatoesRating": "86%",
+    "genre": "Drama, Romance"
+  },
+  {
+    "imageUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+    "country": "Australia, 2017",
+    "title": "Movie 7",
+    "imdbRating": "91.2 / 100",
+    "rottenTomatoesRating": "95%",
+    "genre": "Adventure, Fantasy"
+  },
+  {
+    "imageUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+    "country": "USA, 2023",
+    "title": "Movie 8",
+    "imdbRating": "77.8 / 100",
+    "rottenTomatoesRating": "83%",
+    "genre": "Comedy, Action"
+  },
+  {
+    "imageUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+    "country": "Germany, 2020",
+    "title": "Movie 9",
+    "imdbRating": "85.7 / 100",
+    "rottenTomatoesRating": "89%",
+    "genre": "Drama, Thriller"
+  },
+  {
+    "imageUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+    "country": "USA, 2021",
+    "title": "Movie 10",
+    "imdbRating": "90.4 / 100",
+    "rottenTomatoesRating": "94%",
+    "genre": "Sci-Fi, Action"
+  }
+]

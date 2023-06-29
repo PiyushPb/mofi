@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import "./css/featuredmovies.css";
 
 // Import Swiper React components
@@ -10,7 +11,15 @@ import { Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 
+import swiperData from "../data/featuredMovies.json";
+
 export default function Featuredmovies() {
+  const [swiperSlides, setSwiperSlides] = useState([]);
+
+  useEffect(() => {
+    // Load the swiper data from the JSON file
+    setSwiperSlides(swiperData);
+  }, []);
   return (
     <div className="featured_movies">
       <div className="featured_movies_container">
@@ -55,210 +64,39 @@ export default function Featuredmovies() {
           modules={[Autoplay]}
           className="featured_movies_list_swiper"
         >
-          <SwiperSlide>
-            <div className="featured_movies_list">
-              <div className="featured_movies_list_item">
-                <img
-                  src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg"
-                  alt="movie poster"
-                />
-                <div className="featured_movies_list_item_info">
-                  <span>USA, 2016 - Current</span>
-                  <h3>Money Heist</h3>
-                  <span className="swiper_rating_icon">
-                    <div className="imdb">
-                      <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg"
-                        alt="IMDB"
-                        className="rating_icon"
-                        width={20}
-                      />
-                      <span className="swiper_rating_value">88.0 / 100</span>
-                    </div>
-                    <div className="rottentomato">
-                      <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Rotten_Tomatoes.svg"
-                        alt="IMDB"
-                        className="rating_icon rotten"
-                      />
-                      <span className="swiper_rating_value">97%</span>
-                    </div>
-                  </span>
-                  <span>Crime, Drama, Thriller</span>
+          {swiperSlides.map((slide, index) => (
+            <SwiperSlide key={index}>
+              <div className="featured_movies_list">
+                <div className="featured_movies_list_item">
+                  <img src={slide.imageUrl} alt={slide.title} />
+                  <div className="featured_movies_list_item_info">
+                    <span>{slide.country}</span>
+                    <h3>{slide.title}</h3>
+                    <span className="swiper_rating_icon">
+                      <div className="imdb">
+                        <img
+                          src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg"
+                          alt="IMDB"
+                          className="rating_icon"
+                          width={20}
+                        />
+                        <span className="swiper_rating_value">88.0 / 100</span>
+                      </div>
+                      <div className="rottentomato">
+                        <img
+                          src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Rotten_Tomatoes.svg"
+                          alt="IMDB"
+                          className="rating_icon rotten"
+                        />
+                        <span className="swiper_rating_value">97%</span>
+                      </div>
+                    </span>
+                    <span>Crime, Drama, Thriller</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="featured_movies_list">
-              <div className="featured_movies_list_item">
-                <img
-                  src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg"
-                  alt="movie poster"
-                />
-                <div className="featured_movies_list_item_info">
-                  <span>USA, 2016 - Current</span>
-                  <h3>Money Heist</h3>
-                  <span className="swiper_rating_icon">
-                    <div className="imdb">
-                      <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg"
-                        alt="IMDB"
-                        className="rating_icon"
-                        width={20}
-                      />
-                      <span className="swiper_rating_value">88.0 / 100</span>
-                    </div>
-                    <div className="rottentomato">
-                      <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Rotten_Tomatoes.svg"
-                        alt="IMDB"
-                        className="rating_icon rotten"
-                      />
-                      <span className="swiper_rating_value">97%</span>
-                    </div>
-                  </span>
-                  <span>Crime, Drama, Thriller</span>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="featured_movies_list">
-              <div className="featured_movies_list_item">
-                <img
-                  src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg"
-                  alt="movie poster"
-                />
-                <div className="featured_movies_list_item_info">
-                  <span>USA, 2016 - Current</span>
-                  <h3>Money Heist</h3>
-                  <span className="swiper_rating_icon">
-                    <div className="imdb">
-                      <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg"
-                        alt="IMDB"
-                        className="rating_icon"
-                        width={20}
-                      />
-                      <span className="swiper_rating_value">88.0 / 100</span>
-                    </div>
-                    <div className="rottentomato">
-                      <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Rotten_Tomatoes.svg"
-                        alt="IMDB"
-                        className="rating_icon rotten"
-                      />
-                      <span className="swiper_rating_value">97%</span>
-                    </div>
-                  </span>
-                  <span>Crime, Drama, Thriller</span>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="featured_movies_list">
-              <div className="featured_movies_list_item">
-                <img
-                  src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg"
-                  alt="movie poster"
-                />
-                <div className="featured_movies_list_item_info">
-                  <span>USA, 2016 - Current</span>
-                  <h3>Money Heist</h3>
-                  <span className="swiper_rating_icon">
-                    <div className="imdb">
-                      <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg"
-                        alt="IMDB"
-                        className="rating_icon"
-                        width={20}
-                      />
-                      <span className="swiper_rating_value">88.0 / 100</span>
-                    </div>
-                    <div className="rottentomato">
-                      <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Rotten_Tomatoes.svg"
-                        alt="IMDB"
-                        className="rating_icon rotten"
-                      />
-                      <span className="swiper_rating_value">97%</span>
-                    </div>
-                  </span>
-                  <span>Crime, Drama, Thriller</span>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="featured_movies_list">
-              <div className="featured_movies_list_item">
-                <img
-                  src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg"
-                  alt="movie poster"
-                />
-                <div className="featured_movies_list_item_info">
-                  <span>USA, 2016 - Current</span>
-                  <h3>Money Heist</h3>
-                  <span className="swiper_rating_icon">
-                    <div className="imdb">
-                      <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg"
-                        alt="IMDB"
-                        className="rating_icon"
-                        width={20}
-                      />
-                      <span className="swiper_rating_value">88.0 / 100</span>
-                    </div>
-                    <div className="rottentomato">
-                      <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Rotten_Tomatoes.svg"
-                        alt="IMDB"
-                        className="rating_icon rotten"
-                      />
-                      <span className="swiper_rating_value">97%</span>
-                    </div>
-                  </span>
-                  <span>Crime, Drama, Thriller</span>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="featured_movies_list">
-              <div className="featured_movies_list_item">
-                <img
-                  src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg"
-                  alt="movie poster"
-                />
-                <div className="featured_movies_list_item_info">
-                  <span>USA, 2016 - Current</span>
-                  <h3>Money Heist</h3>
-                  <span className="swiper_rating_icon">
-                    <div className="imdb">
-                      <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg"
-                        alt="IMDB"
-                        className="rating_icon"
-                        width={20}
-                      />
-                      <span className="swiper_rating_value">88.0 / 100</span>
-                    </div>
-                    <div className="rottentomato">
-                      <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Rotten_Tomatoes.svg"
-                        alt="IMDB"
-                        className="rating_icon rotten"
-                      />
-                      <span className="swiper_rating_value">97%</span>
-                    </div>
-                  </span>
-                  <span>Crime, Drama, Thriller</span>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>
