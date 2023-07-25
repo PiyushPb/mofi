@@ -17,7 +17,7 @@ function Navbar() {
         />
         <FiSearch className="nav_search_button" />
       </div>
-      <h1 className="nav_title">Sign in</h1>
+      <h1 className="signin">Sign in</h1>
     </nav>
   );
 }
